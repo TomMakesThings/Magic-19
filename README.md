@@ -4,8 +4,13 @@ Given 19 dots arranged in a hexagon, the task is to label the dots with the numb
 
 <img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon.png" width=400>
 
-For representing the magic 19 puzzle, all points are assigned a letter A - S (Figure
-6). Each of the 12 edges consisting of three points is encoded in a binary matrix. Us-
+## Solving the Puzzle
+
+
+
+<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Alphabet.png" width=400>
+
+For representing the magic 19 puzzle, all points are assigned a letter A - S Each of the 12 edges consisting of three points is encoded in a binary matrix. Us-
 ing function solveMagic19, the simulated annealing algorithm is repeatedly run until
 a solution is found, i.e. when the energy / score reaches zero.
 To initialize simulated annealing, points A - S are randomly assigned a unique
@@ -35,3 +40,5 @@ Additionally when run multiple times, sometimes a solution was found again but w
 order of the points 
 ipped. For example seeds 123456, 999 and 112021 all generate the same
 solution but with dierent letter allocations.
+
+<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Solutions.png" width=700>
