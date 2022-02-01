@@ -2,13 +2,13 @@
 ## The Problem
 Given 19 dots arranged in a hexagon, the task is to label the dots with the numbers 1 to 19 so that each set of three dots that lie along a straight-line segment add up to 22.
 
-<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon.png" width=400>
+<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon.png" width=350>
 
 ## Solving the Puzzle
 
 
 
-<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Alphabet.png" width=400>
+<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Alphabet.png" width=350>
 
 For representing the magic 19 puzzle, all points are assigned a letter A - S Each of the 12 edges consisting of three points is encoded in a binary matrix. Us-
 ing function solveMagic19, the simulated annealing algorithm is repeatedly run until
@@ -41,4 +41,4 @@ order of the points
 ipped. For example seeds 123456, 999 and 112021 all generate the same
 solution but with dierent letter allocations.
 
-<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Solutions.png" width=700>
+<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Solutions.png" width=600>
