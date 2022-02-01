@@ -2,7 +2,7 @@
 ## The Problem
 Given 19 dots arranged in a hexagon, the task is to label the dots with the numbers 1 to 19 so that each set of three dots that lie along a straight-line segment add up to 22.
 
-<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon.png" width=350>
+<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon.png" width=320>
 
 ## Simulated Annealing
 Simulated annealing is a iterative, heuristic method for solving optimisation problems. Within each iteration, a random swap between two neighbouring states is proposed. If this swap improves the solution through lowering the system's energy E, it is always accepted. Otherwise, it may still make the change with probability less than 1. This probability is determined by the temperature of the system T. At the beginning, T is initialised as a high value. It then decreases over iterations via an annealing schedule, evenutally reaching zero. This has the effect that at the start, the algorithm explore the search place. As time progresses, the system converging to a minimum energy state.
@@ -11,7 +11,7 @@ Simulated annealing is a iterative, heuristic method for solving optimisation pr
 
 To represent the magic 19 puzzle, all points can be assigned a letter A - S. This allows each of the 12 edges consisting of three points to be encoded in a binary matrix.
 
-<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Alphabet.png" width=350>
+<img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Alphabet.png" width=320>
  
 To initialise simulated annealing, points A - S are randomly assigned a unique value between 1 - 19. The score of this initial tour is calculated by the Residual sum of squares (RSS) energy function. This is the squared sum of the difference between the total of each edge and the target value 22.
 
