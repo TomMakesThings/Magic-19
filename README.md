@@ -1,4 +1,6 @@
 # Magic-19
+## The Problem
+Given 19 dots arranged in a hexagon, the task is to label the dots with the numbers 1 to 19 so that each set of three dots that lie along a straight-line segment add up to 22.
 
 For representing the magic 19 puzzle, all points are assigned a letter A - S (Figure
 6). Each of the 12 edges consisting of three points is encoded in a binary matrix. Us-
