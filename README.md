@@ -1,4 +1,4 @@
-# Magic-19
+# Solving the Magic 19 Puzzle through Simulated Annealing
 ## The Problem
 Given 19 dots arranged in a hexagon, the task is to label the dots with the numbers 1 to 19 so that each set of three dots that lie along a straight-line segment add up to 22.
 
@@ -14,6 +14,8 @@ To represent the magic 19 puzzle, all points can be assigned a letter A - S. Thi
 <img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Alphabet.png" width=350>
  
 To initialise simulated annealing, points A - S are randomly assigned a unique value between 1 - 19. The score of this initial tour is calculated by the energy function. This returns the squared sum of the difference between the total of each edge and 22. The residual sum of squares was selected so that the algorithm is more likely to make swaps that bring the edges closer to the desired value. Squaring ensures that a negative value can never be added to the score.
+
+<img src="https://render.githubusercontent.com/render/math?math=$RSS = \sum_{i=1}^{n}(v - 22)^2$">
 
 The annealing process is run until either a stopping condition is met, or a maximum number of iterations. The temperature per iteration is determined using the fast simulated annealing temperature function. This is the initial temperature divided by the number of iterations.
 
