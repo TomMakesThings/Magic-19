@@ -4,15 +4,15 @@ Given 19 dots arranged in a hexagon, the task is to label the dots with the numb
 
 <img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon.png" width=350>
 
-## Solving the Puzzle
+## Simulated Annealing
+Simulated annealing is a iterative, heuristic method for solving optimisation problems. Within each iteration, a random swap between two neighbouring states is proposed. If this swap improves the solution through lowering the system's energy E, it is always accepted. Otherwise, it may still make the change with probability less than 1. This probability is determined by the temperature of the system T. At the beginning, T is initialised as a high value. It then decreases over iterations via an annealing schedule, evenutally reaching zero. This has the effect that at the start, the algorithm explore the search place. As time progresses, the system converging to a minimum energy state.
 
+## Solving the Puzzle through Simulated Annealing
 
+To represent the magic 19 puzzle, all points can be assigned a letter A - S. Each of the 12 edges consisting of three points is encoded in a binary matrix. Simulated annealing algorithm can be repeatedly run until a solution is found, i.e. when the energy / score reaches zero.
 
 <img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Alphabet.png" width=350>
 
-For representing the magic 19 puzzle, all points are assigned a letter A - S Each of the 12 edges consisting of three points is encoded in a binary matrix. Us-
-ing function solveMagic19, the simulated annealing algorithm is repeatedly run until
-a solution is found, i.e. when the energy / score reaches zero.
 To initialize simulated annealing, points A - S are randomly assigned a unique
 value between 1 - 19. The score of this initial tour is calculated by the energy func-
 tion, calculateScore. This returns the squared sum of the dierence between the total
@@ -34,11 +34,8 @@ annealing will end if either a solution was found, or if the algorithm converged
 local optimum. This approach was chosen as the algorithm can get stuck at a local
 optimum if temperature is too low it is more eective to restart the annealing process.
 
-A total of four unique solutions were found: three of which have 2 in the center, one of
-which has 4. These can be found when running with seeds 540267, 123456, 10 and 250 below.
-Additionally when run multiple times, sometimes a solution was found again but with the
-order of the points 
-ipped. For example seeds 123456, 999 and 112021 all generate the same
-solution but with dierent letter allocations.
+## Solutions
+A total of four unique solutions were found: three of which have 2 in the center, one of which has 4. When run multiple times, sometimes a solution is found again but with the
+order of the points fipped.
 
 <img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Hexagon-Solutions.png" width=600>
