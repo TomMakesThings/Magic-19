@@ -1,4 +1,11 @@
-# Solving the Magic 19 Puzzle through Simulated Annealing
+<div align="center">
+  <h1>Solving the Magic 19 Puzzle through Simulated Annealing</h1>
+  <p><b>Code by <a href="https://github.com/TomMakesThings">TomMakesThings</a></b></p>
+  <p><b><sub>October 2021</sub></b></p>
+</div>
+
+---
+
 ## The Problem
 Given 19 dots arranged in a hexagon, the task is to label the dots with the numbers 1 to 19 so that each set of three dots that lie along a straight-line segment add up to 22.
 
@@ -15,18 +22,18 @@ To represent the magic 19 puzzle, all points can be assigned a letter A - S. Thi
  
 To initialise simulated annealing, points A - S are randomly assigned a unique value between 1 - 19. The score of this initial tour is calculated by the Residual sum of squares (RSS) energy function. This is the squared sum of the difference between the total of each edge and the target value 22.
 
-<img src="https://render.githubusercontent.com/render/math?math=$RSS = \sum_{i=1}^{n}(e - 22)^2$">
+$RSS = \sum_{i=1}^{n}(e - 22)^2$
 
 The annealing process is run until either the energy reaches zero, or a maximum number of iterations is reached. The temperature per iteration is determined using the fast simulated annealing temperature function. This is the initial temperature divided by the number of iterations.
 
-<img src="https://render.githubusercontent.com/render/math?math=$T = \frac{T_{0}}{iterations}$">
+$T = \frac{T_{0}}{iterations}$
 
 <img src="https://github.com/TomMakesThings/Magic-19/blob/assets/Images/Annealing-Schedule.png" width=500>
 
 The probability of acceptance is calculated using the Metropolis acceptance criterion. For temperature greater than zero, this is the exponential of the diverence
 between the current and new score divided by temperature. For temperature of zero, if the new tour has a higher score then this is set as 1 allowing it to be kept. Similarly, if the new tour is worse then acceptance is set at 0 so it is discarded. The acceptance rate is then compared against a random number generated from a uniform distribution and if acceptance is higher, then the new tour is accepted as the current tour.
 
-<img src="https://render.githubusercontent.com/render/math?math=$C(T > 0) = e^{- (score(new) - score(current))/T}$" height=22>
+$C(T > 0) = e^{- (score(new) - score(current))/T}$
 
 Before the end of each iteration, the stopping conditions are checked. The process will end if either a solution was found, or the algorithm converged to a local optimum. As simulated annealing doesn't always converge to a global optimum, it can get stuck at a local optimum if temperature is too low. Therefore it is more effective to restart the annealing process and try again until the energy of the system reaches zero.
 
