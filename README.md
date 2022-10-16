@@ -1,6 +1,6 @@
 <div align="center">
-  <h1>Solving the Magic 19 Puzzle through Simulated Annealing</h1>
-  <p><b>Code by <a href="https://github.com/TomMakesThings">TomMakesThings</a></b></p>
+  <h1>Simulated Annealing Magic 19 Puzzle Solver</h1>
+  <p><b>⬢⬢⬢ Code by <a href="https://github.com/TomMakesThings">TomMakesThings</a></b> ⬢⬢⬢</p>
   <p><b><sub>October 2021</sub></b></p>
 </div>
 
